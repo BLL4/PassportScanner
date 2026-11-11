@@ -71,6 +71,7 @@ struct ContentView: View {
                 CameraSheet(mode: .mrz, onFound: { model.apply($0) })
             }
         }
+        .onAppear { DemoMode.run(model: model) }
         .onDrop(of: [.fileURL], isTargeted: $dropTargeted) { providers in
             guard let p = providers.first else { return false }
             _ = p.loadObject(ofClass: URL.self) { url, _ in

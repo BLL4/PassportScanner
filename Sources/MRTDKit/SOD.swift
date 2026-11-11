@@ -206,6 +206,15 @@ public struct PassiveAuthResult {
     public var csca: Status = .notChecked("no CSCA certificates loaded")
     public var cscaCertificate: Certificate?
 
+    public init(hashAlgorithm: String, dataGroupHashes: [DataGroupID: Bool], dataGroupsInSOD: [DataGroupID],
+                signature: Status, signer: Certificate?) {
+        self.hashAlgorithm = hashAlgorithm
+        self.dataGroupHashes = dataGroupHashes
+        self.dataGroupsInSOD = dataGroupsInSOD
+        self.signature = signature
+        self.signer = signer
+    }
+
     public var hashesValid: Bool { !dataGroupHashes.isEmpty && dataGroupHashes.values.allSatisfy { $0 } }
 }
 

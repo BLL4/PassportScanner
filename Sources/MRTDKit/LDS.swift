@@ -110,6 +110,13 @@ public struct FaceImage {
     public let format: Format
     public let width: Int?
     public let height: Int?
+
+    public init(data: Bytes, format: Format, width: Int?, height: Int?) {
+        self.data = data
+        self.format = format
+        self.width = width
+        self.height = height
+    }
 }
 
 public enum DG2 {
@@ -165,6 +172,10 @@ public enum DG7 {
 /// Text fields from DG11 / DG12 / DG16 in a stable display order.
 public struct LabeledFields: Equatable {
     public var items: [(label: String, value: String)]
+
+    public init(items: [(label: String, value: String)]) {
+        self.items = items
+    }
 
     public static func == (a: LabeledFields, b: LabeledFields) -> Bool {
         a.items.map(\.label) == b.items.map(\.label) && a.items.map(\.value) == b.items.map(\.value)

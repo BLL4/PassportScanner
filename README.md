@@ -4,6 +4,11 @@ Reads the NFC chip of passports and ICAO-compliant ID cards (e.g. EU ID cards) w
 contactless reader. **Read-only**: the chip layer refuses every command except SELECT, READ BINARY
 and the BAC/PACE authentication commands.
 
+![Passport Scanner showing a read passport: photo, personal data and chip security checks](docs/screenshot.png)
+
+*Shown with the fictional ICAO specimen passport (“Anna Maria Eriksson”, Utopia), not real data.
+Regenerate with `scripts/screenshot.sh`.*
+
 ## Before you trust this app
 
 This app handles highly sensitive personal data: names, dates of birth, document numbers,
@@ -81,6 +86,7 @@ The master list's own signature is not verified, so only load lists from sources
 - `Sources/PassportScanner`: SwiftUI app.
 - `Sources/mrtd-read`: CLI for testing readers and chips.
 - `scripts/make_icon.swift`: draws `Resources/AppIcon.icns`.
+- `scripts/screenshot.sh`: renders `docs/screenshot.png` (demo mode with the specimen document; see `DemoMode.swift`).
 - `Tests/MRTDKitTests`: ICAO 9303 worked examples, OpenSSL cross-checks and a simulated chip
   (`MockChip`) for end-to-end BAC/PACE reads.
 
