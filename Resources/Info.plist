@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Passport Scanner</string>
+	<key>CFBundleDisplayName</key>
+	<string>Passport Scanner</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.passportscanner</string>
+	<key>CFBundleExecutable</key>
+	<string>PassportScanner</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Reads passports and ID cards. Read-only; all data stays on this Mac.</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>LSMultipleInstancesProhibited</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is used to read the machine readable zone (MRZ) of your passport or ID card, which is needed to unlock its chip. Images are processed on this Mac only.</string>
+</dict>
+</plist>
